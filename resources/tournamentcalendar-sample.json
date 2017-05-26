@@ -1,0 +1,27 @@
+{
+    "competition": [
+        {
+            "competitionFormat": "Domestic league",
+            "country": "England",
+            "countryId": "1fk5l4hkqk12i7zske6mcqju6",
+            "id": "2kwbbcootiqqgmrzs6o5inle5",
+            "isFriendly": "no",
+            "name": "Premier League",
+            "ocId": "8",
+            "opId": "8",
+            "tournamentCalendar": [
+                {
+                    "active": "yes",
+                    "endDate": "2017-05-21Z",
+                    "id": "2c1fh40r28amu4rgz0q66ago9",
+                    "lastUpdated": "2017-03-23T10:03:17Z",
+                    "name": "2016/2017",
+                    "ocId": "12653",
+                    "startDate": "2016-08-13Z"
+                }
+            ],
+            "type": "men"
+        }
+    ],
+    "lastUpdated": "2017-04-25T13:53:04Z"
+}

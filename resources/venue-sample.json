@@ -1,0 +1,32 @@
+{
+    "venue": [
+        {
+            "address": "R\u00e5sta Strandv\u00e4g 1",
+            "capacity": 54329,
+            "city": "Solna",
+            "contestant": [
+                {
+                    "clubName": "AIK",
+                    "id": "5mbo4f0vps12dr0fcvjn3wyp5",
+                    "teamType": "men",
+                    "type": "club"
+                },
+                {
+                    "clubName": "Sweden",
+                    "id": "4w1ktgu1nbbgqfe3ssbb4fg5v",
+                    "teamType": "men",
+                    "type": "national"
+                }
+            ],
+            "country": "Sweden",
+            "countryCode": "SWE",
+            "countryId": "1z6l2c33w2kyz9rdefs1d68nb",
+            "id": "6qv56cq8m56uq104fa4geubf9",
+            "mapsGeoCodeLatitude": "59.37182296",
+            "mapsGeoCodeLongitude": "18.00178524",
+            "name": "Friends Arena",
+            "opened": 2012,
+            "surface": "grass"
+        }
+    ]
+}
