@@ -15,6 +15,7 @@ module Statium
 
         def initialize(params)
           @matchInfo = MatchInfo.new(params['matchInfo'])
+          @liveData = LiveData.new(params['liveData'])
         end
       end
     end

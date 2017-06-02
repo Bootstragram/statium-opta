@@ -18,6 +18,14 @@ module Statium
           uri.query = URI.encode_www_form(query_options)
           uri
         end
+
+        def uri(auth_key, lang = 'en')
+          raise "This method must be overriden by implementing classes"
+        end
+
+        def parse
+          raise "This method must be overriden by implementing classes"
+        end
       end
     end
   end

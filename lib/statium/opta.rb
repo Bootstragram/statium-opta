@@ -15,6 +15,10 @@ module Statium
       autoload :TournamentCalendar, 'statium/opta/model/tournament_calendar'
       autoload :Match, 'statium/opta/model/match'
       autoload :MatchInfo, 'statium/opta/model/match_info'
+      autoload :LiveData, 'statium/opta/model/live_data'
+      autoload :MatchDetails, 'statium/opta/model/match_details'
+      autoload :Scores, 'statium/opta/model/scores'
+      autoload :Score, 'statium/opta/model/score'
     end
   end
 end
