@@ -33,6 +33,10 @@ module Statium
             end
           end
         end
+
+        def to_s
+          return "#{name} - #{id} (#{super.to_s})"
+        end
       end
     end
   end

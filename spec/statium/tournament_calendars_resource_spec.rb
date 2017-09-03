@@ -7,13 +7,19 @@ describe Statium::Opta::Client do
     Statium::Opta::Client.new.load(ENV['STATIUM_OPTA_OUTLET_AUTH_KEY'], 'en', tournament_calendar_resource) do |success, calendars|
       expect(success).to be true
       expect(calendars.count).to be > 0
-      expect(calendars[0].name).to eq 'Premier League'
-      expect(calendars[0].tournamentCalendars.count).to be > 0
 
-      premier_league_2016_2017 = calendars[0].tournamentCalendars.select { |calendar| calendar.id == '2c1fh40r28amu4rgz0q66ago9' }
-      expect(premier_league_2016_2017).not_to be nil
-      expect(premier_league_2016_2017.count).to be 1
-      expect(premier_league_2016_2017[0].name).to eq '2016/2017'
+      # Extrat the Premier League (id 2kwbbcootiqqgmrzs6o5inle5)
+      premier_league_candidates = calendars.select { |calendar| calendar.id == '2kwbbcootiqqgmrzs6o5inle5' }
+      expect(premier_league_candidates.count).to eq 1
+      premier_league = premier_league_candidates[0]
+      expect(premier_league.name).to eq 'Premier League'
+      expect(premier_league.tournamentCalendars.count).to be > 0
+
+      # Extract the 2017/2018 season of the Premier League (id 1pnncrpxn8wm3s9opk8n9ozxl)
+      premier_league_2017_2018_candidates = premier_league.tournamentCalendars.select { |tournament_calendar| tournament_calendar.id == '1pnncrpxn8wm3s9opk8n9ozxl' }
+      expect(premier_league_2017_2018_candidates).not_to be nil
+      expect(premier_league_2017_2018_candidates.count).to be 1
+      expect(premier_league_2017_2018_candidates[0].name).to eq '2017/2018'
     end
   end
 end

@@ -15,6 +15,10 @@ module Statium
             instance_variable_set("@#{key}", value)
           end
         end
+
+        def to_s
+          "#{name} from #{startDate} to #{endDate} - #{id} (#{super.to_s})"
+        end
       end
     end
   end
