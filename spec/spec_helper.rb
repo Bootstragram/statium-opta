@@ -2,6 +2,9 @@ $LOAD_PATH.unshift File.expand_path("../../lib", __FILE__)
 require "statium/opta"
 require 'open-uri'
 
+ACTIVE_PREMIER_LEAGUE_TOURNAMENT_CALENDAR_UUID = "1pnncrpxn8wm3s9opk8n9ozxl"
+ACTIVE_WATFORD_MAN_CITY_MATCH_ID = "96lguj4aux9abkzabccjdojmy"
+
 def my_public_ip
   open('http://whatismyip.akamai.com').read
 end

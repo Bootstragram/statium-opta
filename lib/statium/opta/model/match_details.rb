@@ -11,7 +11,9 @@ module Statium
             instance_variable_set("@#{key}", value)
           end
 
-          @scores = Scores.new(params['scores'])
+          if params['scores']
+            @scores = Scores.new(params['scores'])
+          end
         end
       end
     end

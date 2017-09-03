@@ -3,7 +3,7 @@ require "spec_helper"
 describe Statium::Opta::Client do
   # Fetch live games
   it "can fetch live games status" do
-    match_resource = Statium::Opta::Resource::LiveMatch.new('1pnncrpxn8wm3s9opk8n9ozxl')
+    match_resource = Statium::Opta::Resource::LiveMatch.new(ACTIVE_PREMIER_LEAGUE_TOURNAMENT_CALENDAR_UUID)
     Statium::Opta::Client.new.load(ENV['STATIUM_OPTA_OUTLET_AUTH_KEY'], 'en', match_resource) do |success, matches|
       expect(success).to be true
       # We depend on time here so there's not much more we can do...
