@@ -20,6 +20,15 @@ module Statium
 
         if res.is_a?(Net::HTTPSuccess)
           yield(true, parse_JSON(resource, res.body))
+        elsif res.is_a?(Net::HTTPNotFound)
+          messages = JSON.parse(res.body)
+          # This happens when no games are being played for the live_match resource
+          # It is not a functional error, we just have no games to process
+          if messages["errorCode"].to_i == 10400
+            yield(true, [])
+          else
+            yield(false, nil)
+          end
         else
           yield(false, res.message)
         end
