@@ -11,6 +11,11 @@ module Statium
     class Client
       def load(auth_key, lang = 'en', resource, &completion)
         request_uri = resource.uri(auth_key, lang)
+
+        if Statium::Opta::NETWORK_DEBUG
+          puts "Requesting #{request_uri}"
+        end
+
         res = Net::HTTP.get_response(request_uri)
 
         # Uncomment to debug
